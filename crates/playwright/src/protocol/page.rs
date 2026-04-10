@@ -2194,6 +2194,9 @@ impl ChannelOwner for Page {
                 // Server-initiated close (e.g. context was closed)
                 self.is_closed.store(true, Ordering::Relaxed);
             }
+            "filechooser" => {
+                println!("filechooser event occured!");
+            }
             _ => {
                 // Other events will be handled in future phases
                 // Events: load, domcontentloaded, crash, etc.

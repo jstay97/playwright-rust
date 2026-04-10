@@ -1,5 +1,5 @@
 [package]
-name = "playwright-rs"
+name = "playwright-rs-forked"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -12,7 +12,7 @@ categories = ["development-tools::testing", "web-programming"]
 readme = "../../README.md"
 
 [lib]
-doctest = false  # Disable doc-tests by default (run with: cargo test --doc)
+doctest = false # Disable doc-tests by default (run with: cargo test --doc)
 
 [features]
 default = ["native-tls"]
@@ -48,7 +48,11 @@ urlencoding = "2"
 tempfile = "3"
 
 [target.'cfg(windows)'.dev-dependencies]
-winapi = { version = "0.3", features = ["processthreadsapi", "psapi", "minwindef"] }
+winapi = { version = "0.3", features = [
+    "processthreadsapi",
+    "psapi",
+    "minwindef",
+] }
 
 [build-dependencies]
 reqwest = { version = "0.13", features = ["blocking"] }
