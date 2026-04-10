@@ -1,5 +1,5 @@
 [package]
-name = "playwright-rs-forked"
+name = "playwright-rs"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
